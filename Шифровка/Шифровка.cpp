@@ -23,9 +23,18 @@ int main()
 	cout << "Введите число взаимно простое с " << j << endl;
 	cin >> e;
 
-	int d = (1 % j) / e;
-	cout << "d= " << d << endl;
-
+	int d = 1;
+	int x = 1;
+	while (d == 1)
+	{
+		if ((j * x + 1) % e == 0)
+		{
+			d = (j * x + 1) / e;
+			cout << "d= " << d << endl;
+		}
+		else
+			x++;
+	}
 	int op;
 	int op1;
 	cout << "Введите число для шифрования" << endl;
@@ -34,9 +43,9 @@ int main()
 	int buff1;
 	buff = pow(op, e);
 	buff1 = buff % n;
-
 	cout << buff1 << endl;
-	op = pow(buff, d); 
+
+	op = pow(buff1, d); 
 	op1 = op % n;
 	cout << op1 << endl;
 
