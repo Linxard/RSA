@@ -23,17 +23,25 @@ int main()
 	cout << "Введите число взаимно простое с " << j << endl;
 	cin >> e;
 
-	int d = 1;
-	int x = 1;
-	while (d == 1)
+	int d[5];
+	int x[5];
+	for (int i = 0; i < 5; i++) x[i] =  1;
+	int y = 1;
+	for (int i = 0; i < 5; i++)
 	{
-		if ((j * x + 1) % e == 0)
+		while (y == 1)
 		{
-			d = (j * x + 1) / e;
-			cout << "d= " << d << endl;
+			if ((j * x[i] + 1) % e == 0)
+			{
+				d[i] = (j * x[i] + 1) / e;
+				cout << "d[" << i << "]= " << d[i] << endl;
+				y++;
+				x[i+1]+= x[i];
+			}
+			else
+				x[i]++;
 		}
-		else
-			x++;
+		y = 1;
 	}
 	int op;
 	int op1;
@@ -44,11 +52,10 @@ int main()
 	buff = pow(op, e);
 	buff1 = buff % n;
 	cout << buff1 << endl;
-
-	op = pow(buff1, d); 
-	op1 = op % n;
-	cout << op1 << endl;
-
+	int op11;
+		op1 = pow(buff1, d[1]);
+		op11 = op1 % n;
+		cout << op11 << endl;
 	system("pause");
 }
 
