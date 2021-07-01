@@ -1,4 +1,4 @@
 ﻿  Шифровка.cpp
-C:\Users\Home\source\repos\Шифровка\Шифровка.cpp(44,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
-C:\Users\Home\source\repos\Шифровка\Шифровка.cpp(48,10): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Home\source\repos\Шифровка\Шифровка.cpp(52,12): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\Home\source\repos\Шифровка\Шифровка.cpp(59,15): warning C4244: =: преобразование "double" в "int", возможна потеря данных
   Шифровка.vcxproj -> C:\Users\Home\source\repos\Шифровка\Debug\Шифровка.exe
